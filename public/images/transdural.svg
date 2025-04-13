@@ -1,0 +1,38 @@
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="300" height="160" fill="#111111"/>
+  
+  <!-- 头部轮廓 -->
+  <path d="M80,40 C120,10 180,10 220,40 C240,60 240,100 220,120 C180,150 120,150 80,120 C60,100 60,60 80,40 Z" 
+        fill="#222222" stroke="#ffffff" stroke-width="1.5"/>
+  
+  <!-- 大脑轮廓 -->
+  <path d="M100,50 C130,30 170,30 200,50 C215,65 215,95 200,110 C170,130 130,130 100,110 C85,95 85,65 100,50 Z" 
+        fill="#333333" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="2,2"/>
+  
+  <!-- 发射器 TX1 -->
+  <circle cx="130" cy="70" r="8" fill="#ff3333"/>
+  <text x="125" y="58" font-family="Arial" font-size="8" fill="#ffffff">TX1</text>
+  
+  <!-- 发射器 TX2 -->
+  <circle cx="170" cy="70" r="8" fill="#ff3333"/>
+  <text x="165" y="58" font-family="Arial" font-size="8" fill="#ffffff">TX2</text>
+  
+  <!-- 接收器 RX1 -->
+  <rect x="120" y="100" width="12" height="12" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="115" y="125" font-family="Arial" font-size="8" fill="#ffffff">RX1</text>
+  
+  <!-- 接收器 RX2 -->
+  <rect x="144" y="100" width="12" height="12" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="139" y="125" font-family="Arial" font-size="8" fill="#ffffff">RX2</text>
+  
+  <!-- 接收器 RX3 -->
+  <rect x="168" y="100" width="12" height="12" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="163" y="125" font-family="Arial" font-size="8" fill="#ffffff">RX3</text>
+  
+  <!-- 信号路径 -->
+  <path d="M130,78 C130,90 126,95 126,100" fill="none" stroke="#ff5555" stroke-width="1" stroke-dasharray="1,1"/>
+  <path d="M130,78 C135,90 150,95 150,100" fill="none" stroke="#ff5555" stroke-width="1" stroke-dasharray="1,1"/>
+  <path d="M170,78 C170,90 174,95 174,100" fill="none" stroke="#ff5555" stroke-width="1" stroke-dasharray="1,1"/>
+  <path d="M170,78 C165,90 150,95 150,100" fill="none" stroke="#ff5555" stroke-width="1" stroke-dasharray="1,1"/>
+</svg> 

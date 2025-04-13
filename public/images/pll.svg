@@ -1,0 +1,39 @@
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="300" height="160" fill="#111111"/>
+  
+  <!-- PLL框图 -->
+  <rect x="50" y="60" width="200" height="70" fill="#222222" stroke="#ffffff" stroke-width="1.5" rx="3"/>
+  
+  <!-- 参考输入 -->
+  <line x1="20" y1="80" x2="50" y2="80" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="20" y="75" font-family="Arial" font-size="10" fill="#ffffff">Ref</text>
+  
+  <!-- 鉴相器 -->
+  <rect x="60" y="70" width="30" height="20" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="66" y="84" font-family="Arial" font-size="8" fill="#ffffff">PD</text>
+  
+  <!-- 环路滤波器 -->
+  <rect x="100" y="70" width="30" height="20" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="105" y="84" font-family="Arial" font-size="8" fill="#ffffff">LF</text>
+  
+  <!-- DCO -->
+  <rect x="140" y="70" width="40" height="20" fill="#333333" stroke="#ffffff" stroke-width="1.5"/>
+  <text x="145" y="84" font-family="Arial" font-size="8" fill="#ff5555">DCO</text>
+  
+  <!-- 输出 -->
+  <line x1="180" y1="80" x2="230" y2="80" stroke="#ffffff" stroke-width="1.5"/>
+  <circle cx="230" cy="80" r="3" fill="#ffffff"/>
+  <text x="215" y="70" font-family="Arial" font-size="10" fill="#ffffff">Out</text>
+  
+  <!-- 反馈路径 -->
+  <path d="M190,80 L190,105 L90,105 L90,90" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  
+  <!-- Fractional-N模块 -->
+  <rect x="100" y="95" width="80" height="20" rx="3" fill="#333333" stroke="#ff5555" stroke-width="1.5"/>
+  <text x="110" y="108" font-family="Arial" font-size="8" fill="#ff5555">Fractional-N</text>
+  
+  <!-- 低功耗标记 -->
+  <path d="M210,100 L225,115 L240,100" fill="none" stroke="#ff5555" stroke-width="1.5"/>
+  <text x="215" y="125" font-family="Arial" font-size="8" fill="#ffffff">673μW</text>
+</svg> 

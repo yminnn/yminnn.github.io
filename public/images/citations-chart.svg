@@ -1,0 +1,55 @@
+<svg width="600" height="300" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="600" height="300" fill="#111111"/>
+  
+  <!-- 坐标轴 -->
+  <line x1="40" y1="130" x2="260" y2="130" stroke="#ffffff" stroke-width="1.5"/>
+  <line x1="40" y1="130" x2="40" y2="30" stroke="#ffffff" stroke-width="1.5"/>
+  
+  <!-- 数据点 -->
+  <circle cx="60" cy="120" r="3" fill="#ffffff"/>
+  <circle cx="85" cy="117" r="3" fill="#ffffff"/>
+  <circle cx="110" cy="110" r="3" fill="#ffffff"/>
+  <circle cx="135" cy="100" r="3" fill="#ffffff"/>
+  <circle cx="160" cy="88" r="3" fill="#ffffff"/>
+  <circle cx="185" cy="70" r="3" fill="#ffffff"/>
+  <circle cx="210" cy="50" r="3" fill="#ffffff"/>
+  <circle cx="235" cy="40" r="3" fill="#ffffff"/>
+  
+  <!-- 数据曲线 -->
+  <path d="M60,120 C70,119 80,118 85,117 C95,115 105,112 110,110 C120,105 130,102 135,100 C145,95 155,90 160,88 C170,80 180,75 185,70 C195,60 205,53 210,50 C220,45 230,42 235,40" 
+        fill="none" stroke="#ff3333" stroke-width="2"/>
+  
+  <!-- 垂直网格线 -->
+  <line x1="60" y1="130" x2="60" y2="30" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="110" y1="130" x2="110" y2="30" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="160" y1="130" x2="160" y2="30" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="210" y1="130" x2="210" y2="30" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  
+  <!-- 水平网格线 -->
+  <line x1="40" y1="110" x2="260" y2="110" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="40" y1="90" x2="260" y2="90" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="40" y1="70" x2="260" y2="70" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <line x1="40" y1="50" x2="260" y2="50" stroke="#333333" stroke-width="0.5" stroke-dasharray="2,2"/>
+  
+  <!-- X轴标签 -->
+  <text x="60" y="145" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="middle">2016</text>
+  <text x="110" y="145" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="middle">2018</text>
+  <text x="160" y="145" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="middle">2020</text>
+  <text x="210" y="145" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="middle">2022</text>
+  
+  <!-- Y轴标签 -->
+  <text x="30" y="110" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="end">100</text>
+  <text x="30" y="90" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="end">200</text>
+  <text x="30" y="70" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="end">300</text>
+  <text x="30" y="50" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="end">400</text>
+  
+  <!-- 标题和标签 -->
+  <text x="150" y="20" font-family="Arial" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">Citations by Year</text>
+  <text x="25" y="80" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="middle" transform="rotate(270, 15, 80)">Citations</text>
+  <text x="150" y="155" font-family="Arial" font-size="8" fill="#ffffff" text-anchor="middle">Year</text>
+  
+  <!-- 数据标记 -->
+  <circle cx="235" cy="40" r="5" fill="#ff3333" stroke="#ffffff" stroke-width="1"/>
+  <text x="245" y="35" font-family="Arial" font-size="9" fill="#ffffff">424</text>
+</svg> 

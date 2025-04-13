@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Yuming He | Researcher & Engineer</title>
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="stylesheet" href="src/styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 音效文件 - 预加载但静音 -->
+    <audio id="hover-sound" preload="auto">
+        <source src="public/sounds/hover.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="click-sound" preload="auto">
+        <source src="public/sounds/click.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="highlight-sound" preload="auto">
+        <source src="public/sounds/highlight.mp3" type="audio/mpeg">
+    </audio>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">YUMING HE</h1>
+            <nav>
+                <ul>
+                    <li><a href="#work">WORK</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#publications">PUBLICATIONS</a></li>
+                    <li><a href="#talks">TALKS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2 class="headline">I am a researcher and engineer specializing in <span class="highlight">Brain-Computer Interfaces</span>, <span class="highlight">Wireless Communication</span>, and <span class="highlight">Integrated Circuits</span>.</h2>
+        </div>
+    </section>
+
+    <section id="work" class="section">
+        <div class="container">
+            <h2 class="section-title"># WORK</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public/images/neural-compression.svg" alt="Neural Compressive Telemetry">
+                    </div>
+                    <h3>Neural Compressive Telemetry</h3>
+                    <p>Event-based system with >11× loss-less data reduction for high-bandwidth intracortical BCIs</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public/images/transdural.svg" alt="Transdural Telemetry">
+                    </div>
+                    <h3>Transdural Telemetry</h3>
+                    <p>Spatially diverse 2TX-3RX galvanic-coupled system for tether-less distributed BCIs</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public/images/neuromorphic.svg" alt="Neuromorphic Sensing">
+                    </div>
+                    <h3>Neuromorphic Sensing</h3>
+                    <p>SNN-based near-sensor computation and event-driven body-channel communication</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public/images/pll.svg" alt="Fractional-N Digital PLL">
+                    </div>
+                    <h3>Fractional-N Digital PLL</h3>
+                    <p>Low-power dividerless design with inherent frequency-capture capability</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public/images/ultrasound.svg" alt="Ultrasound-Powering TX">
+                    </div>
+                    <h3>Ultrasound-Powering TX</h3>
+                    <p>Global charge-redistribution adiabatic drive achieving 69% power reduction</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public/images/transceiver.svg" alt="IR-UWB Transceiver">
+                    </div>
+                    <h3>IR-UWB Transceiver</h3>
+                    <p>3-10GHz design for IEEE 802.15.4a/z applications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"># ABOUT</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm currently at IMEC and the University of Groningen, focusing on developing next-generation circuits and systems for biomedical applications, particularly brain-computer interfaces and wireless communication.</p>
+                    <p>My research interests include:</p>
+                    <ul>
+                        <li>Brain-Computer Interfaces</li>
+                        <li>Wireless Communication</li>
+                        <li>Phase-Locked Loops</li>
+                        <li>Analog-Digital Converters</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="public/images/research-diagram.svg" alt="Research Areas Diagram">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title"># PUBLICATIONS</h2>
+            <div class="publications-metrics">
+                <div class="metric">
+                    <span class="number">424</span>
+                    <span class="label">Citations</span>
+                </div>
+                <div class="metric">
+                    <span class="number">14</span>
+                    <span class="label">h-index</span>
+                </div>
+                <div class="metric">
+                    <span class="number">14</span>
+                    <span class="label">i10-index</span>
+                </div>
+            </div>
+            
+            <div class="citations-chart">
+                <div class="chart-container">
+                    <img src="public/images/citations-chart.svg" alt="Citations per year">
+                </div>
+                <div class="chart-caption">
+                    <h4>Citations Over Time</h4>
+                    <p>Growth in citations from 2016 to 2024</p>
+                </div>
+            </div>
+            
+            <div class="publications-list">
+                <div class="publication">
+                    <h3>An Event-based Neural Compressive Telemetry with >11× Loss-less Data Reduction for High-bandwidth Intracortical Brain Computer Interfaces</h3>
+                    <p class="authors">Y He, S van der Ven, HP Liaw, C Shi, P Russo, M Gourdouparis, et al.</p>
+                    <p class="journal">IEEE transactions on biomedical circuits and systems, 2024</p>
+                    <p class="citations">Citations: 4</p>
+                </div>
+                <div class="publication">
+                    <h3>An Ultrasound-Powering TX with a Global Charge-Redistribution Adiabatic Drive Achieving 69% Power Reduction and 53° Maximum Beam Steering Angle for Implantable Applications</h3>
+                    <p class="authors">M Gourdouparis, C Shi, Y He, S Stanzione, R Ukropec, P Gijsenbergh, et al.</p>
+                    <p class="journal">2024 IEEE International Solid-State Circuits Conference (ISSCC) 67, 102-104, 2024</p>
+                    <p class="citations">Citations: 3</p>
+                </div>
+                <div class="publication">
+                    <h3>A spatially diverse 2TX-3RX galvanic-coupled transdural telemetry for tether-less distributed brain-computer interfaces</h3>
+                    <p class="authors">C Shi, Y He, M Gourdouparis, G Dolmans, YH Liu</p>
+                    <p class="journal">IEEE transactions on biomedical circuits and systems, 2024</p>
+                    <p class="citations">Citations: 2</p>
+                </div>
+            </div>
+            <a href="#" class="view-more">View all publications →</a>
+        </div>
+    </section>
+
+    <section id="talks" class="section">
+        <div class="container">
+            <h2 class="section-title"># TALKS</h2>
+            <div class="talks-list">
+                <div class="talk">
+                    <h3>Neural Compressive Telemetry for Brain-Computer Interfaces</h3>
+                    <p class="venue">IEEE Biomedical Circuits and Systems Conference, 2023</p>
+                </div>
+                <div class="talk">
+                    <h3>Advances in Low-Power Wireless Communication for Implantable Devices</h3>
+                    <p class="venue">International Solid-State Circuits Conference, 2022</p>
+                </div>
+                <div class="talk">
+                    <h3>Event-Driven Systems for Neural Interfaces</h3>
+                    <p class="venue">European Solid State Circuits Conference, 2021</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title"># CONTACT</h2>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:yuming.he@imec-nl.nl">yuming.he@imec-nl.nl</a></p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/yuminghe/" class="social-link">LinkedIn</a>
+                    <a href="https://scholar.google.com/citations?user=bfAVF3UAAAAJ&hl=en" class="social-link">Google Scholar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="particle-footer-wrapper">
+        <div class="particles-container">
+            <canvas id="particles-canvas"></canvas>
+            <div class="particles-copyright">
+                <p>© 2024 Yuming He. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 音量控制按钮 -->
+    <div class="sound-toggle" id="sound-toggle">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+            <path class="wave" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+            <path class="wave" d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+    </div>
+
+    <script src="src/main.js"></script>
+    <script src="public/js/particles.js"></script>
+    <script src="public/js/jelly.js"></script>
+    <script src="public/js/custom-cursor.js"></script>
+    <script src="public/js/headline-effect.js"></script>
+    <script src="public/js/sound-effects.js"></script>
+</body>
+</html> 

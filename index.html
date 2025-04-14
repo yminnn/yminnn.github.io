@@ -6,21 +6,21 @@
     <meta name="theme-color" content="#000000">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Yuming He | Researcher & Engineer</title>
-    <link rel="stylesheet" href="src/styles/main.css">
-    <link rel="stylesheet" href="src/styles/normalize.css">
+    <link rel="stylesheet" href="/src/styles/main.css">
+    <link rel="stylesheet" href="/src/styles/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- 音效文件 - 预加载但静音 -->
     <audio id="hover-sound" preload="auto">
-        <source src="public/sounds/hover.mp3" type="audio/mpeg">
+        <source src="/sounds/hover.mp3" type="audio/mpeg">
     </audio>
     <audio id="click-sound" preload="auto">
-        <source src="public/sounds/click.mp3" type="audio/mpeg">
+        <source src="/sounds/click.mp3" type="audio/mpeg">
     </audio>
     <audio id="highlight-sound" preload="auto">
-        <source src="public/sounds/highlight.mp3" type="audio/mpeg">
+        <source src="/sounds/highlight.mp3" type="audio/mpeg">
     </audio>
 </head>
 <body>
@@ -39,6 +39,30 @@
         </div>
     </header>
 
+    <!-- Theme toggle button -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <div class="switch-container">
+            <div class="switch-track">
+                <svg class="moon-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path class="moon-path" d="M9,2 C4.03,2 0,6.03 0,11 C0,15.97 4.03,20 9,20 C13.97,20 18,15.97 18,11 C18,10.54 17.96,10.08 17.9,9.64 C16.92,11.01 15.32,11.9 13.5,11.9 C10.52,11.9 8.1,9.48 8.1,6.5 C8.1,4.68 8.99,3.08 10.36,2.1 C9.92,2.04 9.46,2 9,2"/>
+                </svg>
+                <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="6"/>
+                </svg>
+            </div>
+            <div class="switch-handle"></div>
+        </div>
+    </button>
+
+    <!-- 声音控制按钮 -->
+    <button class="sound-toggle" id="sound-toggle" aria-label="Toggle sound">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3,9H7L12,4V20L7,15H3V9Z" />
+            <path class="wave" d="M16,7C18.76,7 21,9.24 21,12C21,14.76 18.76,17 16,17V15C17.66,15 19,13.66 19,12C19,10.34 17.66,9 16,9V7Z" />
+            <path class="wave" d="M16,3C21.52,3 26,7.48 26,12C26,16.52 21.52,21 16,21V19C20.42,19 24,15.42 24,12C24,8.58 20.42,5 16,5V3Z" />
+        </svg>
+    </button>
+
     <section id="hero">
         <div class="container">
             <h2 class="headline">I am a researcher and engineer specializing in <span class="highlight">Brain-Computer Interfaces</span>, <span class="highlight">Wireless Communication</span>, and <span class="highlight">Integrated Circuits</span>.</h2>
@@ -51,45 +75,57 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="public/images/neural-compression.svg" alt="Neural Compressive Telemetry">
+                        <object type="image/svg+xml" data="/images/neural-compression.svg" title="Neural Compressive Telemetry"></object>
                     </div>
-                    <h3>Neural Compressive Telemetry</h3>
-                    <p>Event-based system with >11× loss-less data reduction for high-bandwidth intracortical BCIs</p>
+                    <div class="project-content">
+                        <h3>Neural Compressive Telemetry</h3>
+                        <p>Event-based system with >11× loss-less data reduction for high-bandwidth intracortical BCIs</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="public/images/transdural.svg" alt="Transdural Telemetry">
+                        <object type="image/svg+xml" data="/images/transdural.svg" title="Transdural Telemetry"></object>
                     </div>
-                    <h3>Transdural Telemetry</h3>
-                    <p>Spatially diverse 2TX-3RX galvanic-coupled system for tether-less distributed BCIs</p>
+                    <div class="project-content">
+                        <h3>Transdural Telemetry</h3>
+                        <p>Spatially diverse 2TX-3RX galvanic-coupled system for tether-less distributed BCIs</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="public/images/neuromorphic.svg" alt="Neuromorphic Sensing">
+                        <object type="image/svg+xml" data="/images/neuromorphic.svg" title="Neuromorphic Sensing"></object>
                     </div>
-                    <h3>Neuromorphic Sensing</h3>
-                    <p>SNN-based near-sensor computation and event-driven body-channel communication</p>
+                    <div class="project-content">
+                        <h3>Neuromorphic Sensing</h3>
+                        <p>SNN-based near-sensor computation and event-driven body-channel communication</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="public/images/pll.svg" alt="Fractional-N Digital PLL">
+                        <object type="image/svg+xml" data="/images/pll.svg" title="Fractional-N Digital PLL"></object>
                     </div>
-                    <h3>Fractional-N Digital PLL</h3>
-                    <p>Low-power dividerless design with inherent frequency-capture capability</p>
+                    <div class="project-content">
+                        <h3>Fractional-N Digital PLL</h3>
+                        <p>Low-power dividerless design with inherent frequency-capture capability</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="public/images/ultrasound.svg" alt="Ultrasound-Powering TX">
+                        <object type="image/svg+xml" data="/images/ultrasound.svg" title="Ultrasound-Powering TX"></object>
                     </div>
-                    <h3>Ultrasound-Powering TX</h3>
-                    <p>Global charge-redistribution adiabatic drive achieving 69% power reduction</p>
+                    <div class="project-content">
+                        <h3>Ultrasound-Powering TX</h3>
+                        <p>Global charge-redistribution adiabatic drive achieving 69% power reduction</p>
+                    </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="public/images/transceiver.svg" alt="IR-UWB Transceiver">
+                        <object type="image/svg+xml" data="/images/transceiver.svg" title="IR-UWB Transceiver"></object>
                     </div>
-                    <h3>IR-UWB Transceiver</h3>
-                    <p>3-10GHz design for IEEE 802.15.4a/z applications</p>
+                    <div class="project-content">
+                        <h3>IR-UWB Transceiver</h3>
+                        <p>3-10GHz design for IEEE 802.15.4a/z applications</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +146,7 @@
                     </ul>
                 </div>
                 <div class="about-image">
-                    <img src="public/images/research-diagram.svg" alt="Research Areas Diagram">
+                    <object type="image/svg+xml" data="/images/research-diagram.svg" title="Research Areas Diagram"></object>
                 </div>
             </div>
         </div>
@@ -136,7 +172,7 @@
             
             <div class="citations-chart">
                 <div class="chart-container">
-                    <img src="public/images/citations-chart.svg" alt="Citations per year">
+                    <object type="image/svg+xml" data="/images/citations-chart.svg"></object>
                 </div>
                 <div class="chart-caption">
                     <h4>Citations Over Time</h4>
@@ -164,7 +200,7 @@
                     <p class="citations">Citations: 2</p>
                 </div>
             </div>
-            <a href="#" class="view-more">View all publications →</a>
+            <a href="https://scholar.google.com/citations?user=bfAVF3UAAAAJ&hl=en" target="_blank" class="view-more">View all publications</a>
         </div>
     </section>
 
@@ -210,20 +246,13 @@
         </div>
     </div>
 
-    <!-- 音量控制按钮 -->
-    <div class="sound-toggle" id="sound-toggle">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 9v6h4l5 5V4L7 9H3z"/>
-            <path class="wave" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
-            <path class="wave" d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-        </svg>
-    </div>
-
-    <script src="src/main.js"></script>
-    <script src="public/js/particles.js"></script>
-    <script src="public/js/jelly.js"></script>
-    <script src="public/js/custom-cursor.js"></script>
-    <script src="public/js/headline-effect.js"></script>
-    <script src="public/js/sound-effects.js"></script>
+    <script src="/src/main.js"></script>
+    <script src="/js/particles.js"></script>
+    <script src="/js/jelly.js"></script>
+    <script src="/js/custom-cursor.js"></script>
+    <script src="/js/headline-effect.js"></script>
+    <script src="/js/sound-effects.js"></script>
+    <script src="/src/theme.js"></script>
+    <script src="/js/svg-theme-handler.js"></script>
 </body>
 </html> 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #111111; }
+    .text-color { fill: #ffffff; }
+    .box-bg { fill: #222222; }
+    :root[data-theme='light'] .bg { fill: #f5f5f5; }
+    :root[data-theme='light'] .text-color { fill: #333333; }
+    :root[data-theme='light'] .box-bg { fill: #ffffff; }
+    
+    .stroke-color { stroke: #ffffff; }
+    :root[data-theme='light'] .stroke-color { stroke: #333333; }
+    
+    .dash-stroke { stroke: #ffffff; }
+    :root[data-theme='light'] .dash-stroke { stroke: #666666; }
+    
+    .blue-block { fill: #3366ff; }
+    :root[data-theme='light'] .blue-block { fill: #3366ff; opacity: 0.9; }
+    
+    .green-block { fill: #33cc33; }
+    :root[data-theme='light'] .green-block { fill: #33cc33; opacity: 0.9; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="300" height="160" class="bg"/>
+  
+  <!-- 模拟信号波形 -->
+  <path d="M30,80 Q45,40 60,80 Q75,120 90,80" fill="none" class="stroke-color" stroke-width="1.5"/>
+  
+  <!-- ADC 主框架 -->
+  <rect x="100" y="40" width="120" height="80" class="box-bg stroke-color" stroke-width="1.5" rx="4"/>
+  
+  <!-- 采样保持电路 -->
+  <rect x="110" y="60" width="30" height="40" class="blue-block stroke-color" stroke-width="1" rx="2"/>
+  <text x="115" y="85" font-family="Arial" font-size="10" class="text-color">S/H</text>
+  
+  <!-- 量化器 -->
+  <rect x="150" y="60" width="30" height="40" class="green-block stroke-color" stroke-width="1" rx="2"/>
+  <text x="155" y="85" font-family="Arial" font-size="10" class="text-color">Q</text>
+  
+  <!-- 编码器 -->
+  <rect x="190" y="60" width="20" height="40" class="box-bg stroke-color" stroke-width="1" rx="2"/>
+  <text x="193" y="85" font-family="Arial" font-size="10" class="text-color">E</text>
+  
+  <!-- 数字输出 -->
+  <g transform="translate(230, 70)">
+    <rect width="40" height="5" class="blue-block"/>
+    <rect width="40" height="5" y="15" class="blue-block"/>
+  </g>
+  
+  <!-- 标签 -->
+  <text x="130" y="35" font-family="Arial" font-size="12" class="text-color">12-bit SAR ADC</text>
+  <text x="230" y="60" font-family="Arial" font-size="10" class="text-color">Digital</text>
+  <text x="230" y="140" font-family="Arial" font-size="10" class="text-color">1.2 MS/s</text>
+</svg> 

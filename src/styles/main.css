@@ -2,16 +2,119 @@
 /* Color Scheme: Black, White, and Red */
 
 :root {
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-red: #ff3333;    /* 鲜红色，在黑底上更显眼 */
-  --color-light-gray: #222222;
+  /* Dark theme (default) */
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-accent: #ff3333;
+  --color-card-bg: #0a0a0a;
+  --color-card-image-bg: #111111;
+  --color-border: #222222;
   --color-gray: #888888;
-  --color-dark-gray: #dddddd;
+  --color-light-gray: #dddddd;
+  --color-dark-gray: #0a0a0a;
+  --color-publication-bg: #151515;
   
   --font-main: 'Inter', sans-serif;
   --max-width: 1200px;
   --spacing-unit: 8px;
+}
+
+:root[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-accent: #ff3333;
+  --color-card-bg: #ffffff;
+  --color-card-image-bg: #ffffff;
+  --color-border: #f7f7f7;  /* Even lighter border color */
+  --color-gray: #666666;
+  --color-light-gray: #f5f5f5;
+  --color-dark-gray: #333333;
+  --color-publication-bg: #ffffff;
+  --color-container-bg: #ffffff;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 60px;
+  height: 32px;
+  z-index: 1000;
+}
+
+.switch-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.switch-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-card-bg);
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 6px;  /* Reduced from 8px to 6px */
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.switch-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+[data-theme="dark"] .switch-handle {
+  transform: translateX(28px);
+}
+
+.moon-icon, .sun-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-border);  /* Changed from text color to border color for a softer look */
+  transition: opacity 0.3s ease;
+}
+
+.moon-icon {
+  opacity: 0.5;
+  margin-left: 1px;  /* Reduced from 2px to 1px */
+}
+
+.sun-icon {
+  opacity: 0.5;
+  margin-right: 1px;  /* Reduced from 2px to 1px */
+}
+
+[data-theme="dark"] .moon-icon {
+  opacity: 1;
+  fill: var(--color-text);  /* Brighter color when active */
+}
+
+[data-theme="light"] .sun-icon {
+  opacity: 1;
+  fill: var(--color-text);  /* Brighter color when active */
+}
+
+.moon-path {
+  transform-origin: center;
+  transform: scale(0.8) translateX(2.5px);  /* Adjusted position slightly */
 }
 
 * {
@@ -21,17 +124,19 @@
 body {
   font-family: var(--font-main);
   line-height: 1.6;
-  color: var(--color-white);
-  background-color: var(--color-black);
+  color: var(--color-text);
+  background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 calc(var(--spacing-unit) * 3);
+  background-color: var(--color-container-bg, var(--color-bg));
 }
 
 /* Typography */
@@ -42,45 +147,53 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: var(--color-white);
+  color: var(--color-text);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--color-red);
+  color: var(--color-accent);
 }
 
 a.active {
-  color: var(--color-red);
+  color: var(--color-accent);
 }
 
 /* 恢复默认高亮词样式 */
 .highlight {
-  color: var(--color-red);
+  color: var(--color-accent);
   position: relative;
   display: inline-block;
   padding: 0 2px;
   transition: all 0.3s ease;
 }
 
-/* 高亮词悬停发光效果 */
+/* 高亮词悬停发光效果 - 更加微妙 */
 .highlight:hover {
-  color: var(--color-red);
-  text-shadow: 0 0 8px rgba(255, 51, 51, 0.7), 
-               0 0 12px rgba(255, 51, 51, 0.5),
-               0 0 16px rgba(255, 51, 51, 0.3);
-  transform: scale(1.02);
+  color: var(--color-accent);
+  text-shadow: 0 0 4px rgba(255, 51, 51, 0.3), 
+               0 0 6px rgba(255, 51, 51, 0.2);
+  transform: scale(1.01);
 }
 
 /* Header Styles */
 header {
   padding: calc(var(--spacing-unit) * 3) 0;
-  border-bottom: 1px solid var(--color-light-gray);
   position: sticky;
   top: 0;
-  background-color: var(--color-black); /* 确保头部也是黑色 */
+  background-color: var(--color-bg);
   z-index: 100;
+}
+
+header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-border);
 }
 
 header .container {
@@ -94,7 +207,7 @@ header .container {
   font-weight: 700;
   letter-spacing: 0.1em;
   margin: 0;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 nav ul {
@@ -112,7 +225,7 @@ nav a {
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.05em;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* Hero Section */
@@ -121,35 +234,54 @@ nav a {
   position: relative;
 }
 
+#hero:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
 .headline {
   font-size: 2.5rem;
   font-weight: 400;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.4;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 /* 粒子动画容器样式 - 现在在底部 */
 .particle-footer-wrapper {
   width: 100%;
   position: relative;
-  margin-top: 4rem; /* 与上方内容保持适当间距 */
+  margin-top: 4rem;
   margin-bottom: 0;
   z-index: 2;
-  border-bottom: 1px solid var(--color-light-gray); /* 添加边框替代原来的footer边框 */
+}
+
+.particle-footer-wrapper:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-border);
 }
 
 .particles-container {
   width: 100%;
-  height: 240px; /* 恢复到原来的固定高度 */
+  height: 240px;
   position: relative;
-  background: rgba(34, 34, 34, 0.5); /* 暗色背景 */
+  background: var(--color-bg);
   overflow: hidden;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  will-change: clip-path; /* 优化性能 */
-  border: 1px solid var(--color-light-gray);
+  border-radius: 0;
+  box-shadow: none;
+  will-change: clip-path;
+  border: none;
 }
 
 /* 粒子容器内的版权信息 */
@@ -183,73 +315,114 @@ nav a {
 /* Section Styles */
 .section {
   padding: calc(var(--spacing-unit) * 10) 0;
-  border-top: 1px solid var(--color-light-gray);
   position: relative;
   z-index: 1;
 }
 
+.section:not(#work):before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
 #work {
-  padding-top: calc(var(--spacing-unit) * 10); /* 恢复正常内边距 */
-  border-top: 1px solid var(--color-light-gray);
+  padding-top: calc(var(--spacing-unit) * 10);
 }
 
 .section-title {
   font-size: 1.5rem;
   margin-bottom: calc(var(--spacing-unit) * 6);
   font-weight: 600;
-  color: var(--color-red);
+  color: var(--color-accent);
+}
+
+/* 浅色模式下的标题改为黑色 */
+[data-theme="light"] .section-title {
+  color: var(--color-text);
 }
 
 /* Work Section */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: calc(var(--spacing-unit) * 6);
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--spacing-unit) * 4);
+  margin: calc(var(--spacing-unit) * 6) 0;
 }
 
 .project-card {
-  background-color: var(--color-light-gray);
+  background-color: var(--color-card-bg);
   border-radius: 4px;
   overflow: hidden;
   transition: all 0.3s ease;
   max-width: 350px;
   margin: 0 auto;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 调整浅色模式下的阴影效果 */
+[data-theme="light"] .project-card {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .project-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 3px 8px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* 调整浅色模式下的悬停阴影效果 */
+[data-theme="light"] .project-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .project-image {
-  height: 160px;
-  overflow: hidden;
+  background-color: #111111;
+  margin: 0;
+  padding: 24px 0;  /* Reduced from 32px */
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #111111; /* 与SVG背景颜色完全一致 */
+  align-items: center;
 }
 
-.project-image img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto; /* 恢复为原来的自动宽度 */
+/* Light mode specific styles */
+[data-theme="light"] .project-image {
+  background-color: #f5f5f5;
+}
+
+.project-image img, .project-image object {
+  width: 85%;  /* Increased from previous size */
   height: auto;
-  object-fit: contain; /* 恢复为contain以保持原始比例 */
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img,
+.project-card:hover .project-image object {
+  transform: scale(1.05);  /* Slightly larger scale on hover */
+}
+
+.project-content {
+  background-color: var(--color-card-bg);
+  padding: 20px 24px;  /* Slightly reduced padding */
 }
 
 .project-card h3 {
-  margin: calc(var(--spacing-unit) * 2) 0 calc(var(--spacing-unit));
+  margin: 0 0 8px 0;
   font-size: 1.2rem;
-  color: var(--color-white);
-  padding: 0 calc(var(--spacing-unit) * 2); /* 添加左右内边距 */
+  color: var(--color-text);
 }
 
 .project-card p {
-  color: var(--color-dark-gray);
-  margin-bottom: calc(var(--spacing-unit) * 2);
-  padding: 0 calc(var(--spacing-unit) * 2); /* 添加左右内边距 */
+  color: var(--color-gray);
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* About Section */
@@ -263,7 +436,7 @@ nav a {
 .about-text {
   flex: 1;
   min-width: 300px;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .about-image {
@@ -274,7 +447,7 @@ nav a {
   align-items: center;
 }
 
-.about-image img {
+.about-image img, .about-image object {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
@@ -282,14 +455,14 @@ nav a {
   transition: transform 0.3s ease;
 }
 
-.about-image img:hover {
+.about-image img:hover, .about-image object:hover {
   transform: scale(1.02);
 }
 
 .about-content ul {
   margin-top: 1rem;
   padding-left: 1.5rem;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .about-content li {
@@ -299,117 +472,152 @@ nav a {
 /* Publications Section */
 .publications-metrics {
   display: flex;
-  margin-bottom: calc(var(--spacing-unit) * 6);
   gap: calc(var(--spacing-unit) * 6);
+  margin-bottom: calc(var(--spacing-unit) * 8);
 }
 
 .metric {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: left;
 }
 
 .metric .number {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--color-red);
+  color: var(--color-accent);
+  display: block;
+  line-height: 1.2;
 }
 
 .metric .label {
   font-size: 0.9rem;
-  color: var(--color-white);
+  color: var(--color-text);
+  opacity: 0.8;
 }
 
 .citations-chart {
-  margin-bottom: calc(var(--spacing-unit) * 8);
+  margin: calc(var(--spacing-unit) * 6) 0;
+  background: transparent;
   display: flex;
   gap: calc(var(--spacing-unit) * 4);
-  align-items: center;
-  border: 1px solid var(--color-light-gray);
-  padding: calc(var(--spacing-unit) * 3);
-  background-color: #111111; /* 整个图表容器背景也改为黑色 */
+  align-items: center; /* Changed from flex-start to center */
+  min-height: 300px; /* Ensure enough height for vertical centering */
 }
 
 .chart-container {
   flex: 2;
   max-width: 70%;
+  background: transparent;
+  border-radius: 4px;
+  overflow: hidden;
   display: flex;
-  justify-content: center;
-  background-color: #111111; /* 将背景改为与SVG背景相同的颜色 */
+  align-items: center;
 }
 
-.chart-container img {
-  max-width: 100%;
+.chart-container img, .chart-container object {
+  width: 100%;
   height: auto;
+  display: block;
 }
 
 .chart-caption {
   flex: 1;
+  text-align: center;
+  padding: 0;
+  border: none;
 }
 
 .chart-caption h4 {
-  font-size: 1.2rem;
-  margin-bottom: calc(var(--spacing-unit) * 1);
-  color: var(--color-white);
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--color-text);
 }
 
 .chart-caption p {
-  color: var(--color-gray);
   font-size: 0.9rem;
-}
-
-.publications-list {
-  display: flex;
-  flex-direction: column;
-  gap: calc(var(--spacing-unit) * 4);
+  margin: calc(var(--spacing-unit) * 1) 0 0;
+  color: var(--color-gray);
 }
 
 .publication {
-  border-left: 3px solid var(--color-red);
-  padding-left: calc(var(--spacing-unit) * 3);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 1;
-  transform: translateY(0);
-  background-color: var(--color-light-gray);
+  background-color: var(--color-publication-bg);
   border-radius: 4px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.publication.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+  padding: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
 }
 
 .publication h3 {
-  font-size: 1.1rem;
-  margin-bottom: calc(var(--spacing-unit) * 1);
-  color: var(--color-white);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0 0 calc(var(--spacing-unit) * 2);
+  color: var(--color-text);
+  line-height: 1.4;
 }
 
 .publication p {
-  margin: calc(var(--spacing-unit) * 0.5) 0;
+  margin: calc(var(--spacing-unit) * 1) 0;
   font-size: 0.9rem;
-  color: var(--color-dark-gray);
-}
-
-.authors {
   color: var(--color-gray);
 }
 
-.journal {
+.publication .authors {
   font-style: italic;
-  color: var(--color-gray);
 }
 
-.citations {
-  color: var(--color-red);
+.publication .journal {
+  font-style: italic;
+}
+
+.publication .citations {
+  color: var(--color-accent);
 }
 
 .view-more {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-top: calc(var(--spacing-unit) * 4);
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.view-more:after {
+  content: "→";
+  margin-left: calc(var(--spacing-unit) * 1);
+  transition: transform 0.2s ease;
+}
+
+.view-more:hover {
+  color: var(--color-accent);
+}
+
+.view-more:hover:after {
+  transform: translateX(4px);
+}
+
+.talk {
+  background-color: var(--color-publication-bg);
+  border-radius: 4px;
+  padding: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+}
+
+.talk h3 {
+  font-size: 1rem;
   font-weight: 500;
+  margin: 0 0 calc(var(--spacing-unit) * 2);
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.talk .venue {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  font-style: italic;
 }
 
 /* Talks Section */
@@ -419,41 +627,14 @@ nav a {
   gap: calc(var(--spacing-unit) * 4);
 }
 
-.talk {
-  padding-bottom: calc(var(--spacing-unit) * 3);
-  border-bottom: 1px solid var(--color-light-gray);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 1;
-  transform: translateY(0);
-  background-color: var(--color-light-gray);
-  border-radius: 4px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.talk.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .talk:last-child {
   border-bottom: none;
-}
-
-.talk h3 {
-  margin-bottom: calc(var(--spacing-unit) * 1);
-  color: var(--color-white);
-}
-
-.venue {
-  font-size: 0.9rem;
-  color: var(--color-gray);
 }
 
 /* Contact Section */
 .contact-info {
   max-width: 600px;
-  color: var(--color-white);
+  color: var(--color-text);
 }
 
 .social-links {
@@ -464,16 +645,16 @@ nav a {
 
 .social-link {
   padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
-  border: 1px solid var(--color-red);
+  border: 1px solid var(--color-accent);
   font-weight: 500;
   letter-spacing: 0.05em;
   transition: all 0.3s ease;
-  color: var(--color-red);
+  color: var(--color-accent);
 }
 
 .social-link:hover {
-  background-color: var(--color-red);
-  color: var(--color-black);
+  background-color: var(--color-accent);
+  color: var(--color-bg);
 }
 
 /* Footer */
@@ -481,7 +662,7 @@ footer {
   padding: 0 0 calc(var(--spacing-unit) * 5) 0;
   border-top: none;
   font-size: 0.9rem;
-  color: var(--color-dark-gray);
+  color: var(--color-gray);
   margin-top: -1px; /* 确保与上方粒子容器无缝连接 */
 }
 
@@ -546,7 +727,7 @@ footer .container {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .about-content {
@@ -570,6 +751,11 @@ footer .container {
     margin-bottom: calc(var(--spacing-unit) * 3);
   }
 
+  .chart-caption {
+    text-align: center;
+    width: 100%;
+  }
+
   .publications-metrics {
     flex-direction: column;
     gap: calc(var(--spacing-unit) * 3);
@@ -587,10 +773,6 @@ footer .container {
   
   .section {
     margin: 3rem 0;
-  }
-  
-  .project-grid {
-    grid-template-columns: 1fr;
   }
   
   .project-card {
@@ -622,6 +804,18 @@ footer .container {
   }
 }
 
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Decorative Images */
 .decorative-image {
   margin: 2rem 0;
@@ -649,7 +843,7 @@ footer .container {
   font-size: 1.1rem;
   max-width: 80%;
   margin-bottom: 2rem;
-  color: var(--color-dark-gray);
+  color: var(--color-gray);
 }
 
 /* 自定义光标样式 */
@@ -737,8 +931,8 @@ footer .container {
   right: 20px;
   width: 36px;
   height: 36px;
-  background-color: rgba(34, 34, 34, 0.7);
-  border: 1px solid var(--color-red);
+  background-color: rgba(255, 255, 255, 0.15); /* White background with 15% opacity */
+  border: 1px solid var(--color-accent);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -754,7 +948,7 @@ footer .container {
 }
 
 .sound-toggle svg {
-  fill: var(--color-white);
+  fill: var(--color-text);
   width: 16px;
   height: 16px;
 }
@@ -768,4 +962,13 @@ footer .container {
     bottom: 10px;
     right: 10px;
   }
+}
+
+/* 统一的边框样式 */
+.border-bottom {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.border-top {
+  border-top: 1px solid var(--color-border);
 } 

@@ -1,0 +1,228 @@
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .dark { display: block; }
+      .light { display: none; }
+      :root[data-theme='light'] .dark { display: none; }
+      :root[data-theme='light'] .light { display: block; }
+    </style>
+  </defs>
+
+  <!-- 深色模式 -->
+  <g class="dark">
+    <!-- 背景 -->
+    <rect width="600" height="300" fill="transparent"/>
+    
+    <!-- 标题 -->
+    <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="start" font-weight="bold">Citations Over Time</text>
+    
+    <!-- 图例 -->
+    <rect x="80" y="45" width="14" height="14" fill="#ff3333"/>
+    <text x="100" y="57" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Annual Citations</text>
+    
+    <line x1="200" y1="52" x2="221" y2="52" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="225" cy="52" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <line x1="229" y1="52" x2="250" y2="52" stroke="#ffffff" stroke-width="2"/>
+    <text x="260" y="57" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Cumulative Citations</text>
+    
+    <!-- X轴和Y轴 -->
+    <line x1="50" y1="250" x2="550" y2="250" stroke="#ffffff" stroke-width="1.5"/>
+    <line x1="50" y1="250" x2="50" y2="50" stroke="#ffffff" stroke-width="1.5"/>
+    
+    <!-- 网格线 -->
+    <g opacity="0.2">
+      <line x1="50" y1="210" x2="550" y2="210" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="170" x2="550" y2="170" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="130" x2="550" y2="130" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="90" x2="550" y2="90" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="50" x2="550" y2="50" stroke="#ffffff" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Y轴刻度 - 左侧 -->
+    <text x="45" y="250" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">0</text>
+    <text x="45" y="210" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">20</text>
+    <text x="45" y="170" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">40</text>
+    <text x="45" y="130" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">60</text>
+    <text x="45" y="90" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">80</text>
+    <text x="45" y="50" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">100</text>
+    
+    <!-- Y轴刻度 - 右侧 -->
+    <text x="555" y="210" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">50</text>
+    <text x="555" y="170" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">100</text>
+    <text x="555" y="130" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">150</text>
+    <text x="555" y="90" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">200</text>
+    
+    <!-- X轴年份标签 -->
+    <text x="90" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2016</text>
+    <text x="152" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2017</text>
+    <text x="214" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2018</text>
+    <text x="276" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2019</text>
+    <text x="338" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2020</text>
+    <text x="400" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2021</text>
+    <text x="462" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2022</text>
+    <text x="524" y="270" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">2023</text>
+    
+    <!-- 年度引用柱状图 -->
+    <rect x="80" y="245" width="20" height="5" fill="#ff3333"/>
+    <rect x="142" y="233" width="20" height="17" fill="#ff3333"/>
+    <rect x="204" y="221" width="20" height="29" fill="#ff3333"/>
+    <rect x="266" y="209" width="20" height="41" fill="#ff3333"/>
+    <rect x="328" y="190" width="20" height="60" fill="#ff3333"/>
+    <rect x="390" y="160" width="20" height="90" fill="#ff3333"/>
+    <rect x="452" y="120" width="20" height="130" fill="#ff3333"/>
+    <rect x="514" y="80" width="20" height="170" fill="#ff3333"/>
+    
+    <!-- 年度引用数标签 -->
+    <text x="90" y="240" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="152" y="228" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">15</text>
+    <text x="214" y="216" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">30</text>
+    <text x="276" y="204" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">30</text>
+    <text x="338" y="185" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">50</text>
+    <text x="400" y="155" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">100</text>
+    <text x="462" y="115" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">140</text>
+    <text x="524" y="75" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">190</text>
+    
+    <!-- 累计引用曲线 -->
+    <polyline 
+      points="90,245 152,231 214,209 276,187 338,149 400,110 462,70 524,50" 
+      fill="none" 
+      stroke="#ffffff" 
+      stroke-width="2"
+    />
+    
+    <!-- 累计引用数据点 - 完美的空心圆 -->
+    <circle cx="90" cy="245" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="152" cy="231" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="214" cy="209" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="276" cy="187" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="338" cy="149" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="400" cy="110" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="462" cy="70" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="524" cy="50" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
+    
+    <!-- 累计引用数标签 - 更好地错开位置 -->
+    <text x="90" y="232" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="152" y="218" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">15</text>
+    <text x="214" y="196" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">30</text>
+    <text x="276" y="174" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">60</text>
+    <text x="338" y="136" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">110</text>
+    <text x="400" y="97" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">150</text>
+    <text x="462" y="57" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">170</text>
+    <text x="524" y="37" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">200</text>
+  
+    <!-- X轴标签 -->
+    <text x="300" y="290" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Year</text>
+    
+    <!-- Y轴标签 - 左侧 -->
+    <text x="15" y="150" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" transform="rotate(-90, 15, 150)">Citations</text>
+  </g>
+
+  <!-- 浅色模式 -->
+  <g class="light">
+    <!-- 背景 -->
+    <rect width="600" height="300" fill="transparent"/>
+    
+    <!-- 标题 -->
+    <text x="80" y="30" font-family="Arial, sans-serif" font-size="16" fill="#000000" text-anchor="start" font-weight="bold">Citations Over Time</text>
+    
+    <!-- 图例 -->
+    <rect x="80" y="45" width="14" height="14" fill="#ff3333"/>
+    <text x="100" y="57" font-family="Arial, sans-serif" font-size="12" fill="#000000">Annual Citations</text>
+    
+    <line x1="200" y1="52" x2="221" y2="52" stroke="#000000" stroke-width="2"/>
+    <circle cx="225" cy="52" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <line x1="229" y1="52" x2="250" y2="52" stroke="#000000" stroke-width="2"/>
+    <text x="260" y="57" font-family="Arial, sans-serif" font-size="12" fill="#000000">Cumulative Citations</text>
+    
+    <!-- X轴和Y轴 -->
+    <line x1="50" y1="250" x2="550" y2="250" stroke="#000000" stroke-width="1.5"/>
+    <line x1="50" y1="250" x2="50" y2="50" stroke="#000000" stroke-width="1.5"/>
+    
+    <!-- 网格线 -->
+    <g opacity="0.2">
+      <line x1="50" y1="210" x2="550" y2="210" stroke="#000000" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="170" x2="550" y2="170" stroke="#000000" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="130" x2="550" y2="130" stroke="#000000" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="90" x2="550" y2="90" stroke="#000000" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <line x1="50" y1="50" x2="550" y2="50" stroke="#000000" stroke-width="0.5" stroke-dasharray="2,2"/>
+    </g>
+    
+    <!-- Y轴刻度 - 左侧 -->
+    <text x="45" y="250" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">0</text>
+    <text x="45" y="210" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">20</text>
+    <text x="45" y="170" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">40</text>
+    <text x="45" y="130" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">60</text>
+    <text x="45" y="90" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">80</text>
+    <text x="45" y="50" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">100</text>
+    
+    <!-- Y轴刻度 - 右侧 -->
+    <text x="555" y="210" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">50</text>
+    <text x="555" y="170" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">100</text>
+    <text x="555" y="130" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">150</text>
+    <text x="555" y="90" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">200</text>
+    
+    <!-- X轴年份标签 -->
+    <text x="90" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2016</text>
+    <text x="152" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2017</text>
+    <text x="214" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2018</text>
+    <text x="276" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2019</text>
+    <text x="338" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2020</text>
+    <text x="400" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2021</text>
+    <text x="462" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2022</text>
+    <text x="524" y="270" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">2023</text>
+    
+    <!-- 年度引用柱状图 -->
+    <rect x="80" y="245" width="20" height="5" fill="#ff3333"/>
+    <rect x="142" y="233" width="20" height="17" fill="#ff3333"/>
+    <rect x="204" y="221" width="20" height="29" fill="#ff3333"/>
+    <rect x="266" y="209" width="20" height="41" fill="#ff3333"/>
+    <rect x="328" y="190" width="20" height="60" fill="#ff3333"/>
+    <rect x="390" y="160" width="20" height="90" fill="#ff3333"/>
+    <rect x="452" y="120" width="20" height="130" fill="#ff3333"/>
+    <rect x="514" y="80" width="20" height="170" fill="#ff3333"/>
+    
+    <!-- 年度引用数标签 -->
+    <text x="90" y="240" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">5</text>
+    <text x="152" y="228" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">15</text>
+    <text x="214" y="216" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">30</text>
+    <text x="276" y="204" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">30</text>
+    <text x="338" y="185" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">50</text>
+    <text x="400" y="155" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">100</text>
+    <text x="462" y="115" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">140</text>
+    <text x="524" y="75" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">190</text>
+    
+    <!-- 累计引用曲线 -->
+    <polyline 
+      points="90,245 152,231 214,209 276,187 338,149 400,110 462,70 524,50" 
+      fill="none" 
+      stroke="#000000" 
+      stroke-width="2"
+    />
+    
+    <!-- 累计引用数据点 - 完美的空心圆 -->
+    <circle cx="90" cy="245" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="152" cy="231" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="214" cy="209" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="276" cy="187" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="338" cy="149" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="400" cy="110" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="462" cy="70" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    <circle cx="524" cy="50" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
+    
+    <!-- 累计引用数标签 - 更好地错开位置 -->
+    <text x="90" y="232" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">5</text>
+    <text x="152" y="218" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">15</text>
+    <text x="214" y="196" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">30</text>
+    <text x="276" y="174" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">60</text>
+    <text x="338" y="136" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">110</text>
+    <text x="400" y="97" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">150</text>
+    <text x="462" y="57" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">170</text>
+    <text x="524" y="37" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="middle">200</text>
+    
+    <!-- X轴标签 -->
+    <text x="300" y="290" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Year</text>
+    
+    <!-- Y轴标签 - 左侧 -->
+    <text x="15" y="150" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle" transform="rotate(-90, 15, 150)">Citations</text>
+  </g>
+</svg> 

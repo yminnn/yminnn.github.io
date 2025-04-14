@@ -1,0 +1,114 @@
+<svg width="500" height="360" viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .dark { display: block; }
+      .light { display: none; }
+      :root[data-theme='light'] .dark { display: none; }
+      :root[data-theme='light'] .light { display: block; }
+    </style>
+  </defs>
+
+  <!-- 深色模式 -->
+  <g class="dark">
+    <!-- 背景 -->
+    <rect width="500" height="360" fill="#111111"/>
+    
+    <!-- 图表标题 -->
+    <text x="250" y="40" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" text-anchor="middle">Research Focus Areas</text>
+    
+    <!-- 中心点 -->
+    <circle cx="250" cy="180" r="5" fill="#ff3333"/>
+    
+    <!-- 主要研究领域 -->
+    <g id="main-areas-dark">
+      <!-- 主要研究领域 - 左上象限 -->
+      <circle cx="170" cy="120" r="60" fill="none" stroke="#ff3333" stroke-width="2"/>
+      <text x="170" y="110" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Brain-Computer</text>
+      <text x="170" y="130" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Interfaces</text>
+      <line x1="209" y1="159" x2="245" y2="175" stroke="#ff3333" stroke-width="1.5"/>
+      
+      <!-- 主要研究领域 - 右上象限 -->
+      <circle cx="330" cy="120" r="60" fill="none" stroke="#ff3333" stroke-width="2"/>
+      <text x="330" y="110" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Wireless</text>
+      <text x="330" y="130" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">Communication</text>
+      <line x1="291" y1="159" x2="255" y2="175" stroke="#ff3333" stroke-width="1.5"/>
+      
+      <!-- 主要研究领域 - 左下象限 -->
+      <circle cx="170" cy="240" r="60" fill="none" stroke="#888888" stroke-width="1.5"/>
+      <text x="170" y="235" font-family="Inter, Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Phase-Locked</text>
+      <text x="170" y="255" font-family="Inter, Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Loops</text>
+      <line x1="209" y1="201" x2="245" y2="185" stroke="#888888" stroke-width="1.5"/>
+      
+      <!-- 主要研究领域 - 右下象限 -->
+      <circle cx="330" cy="240" r="60" fill="none" stroke="#888888" stroke-width="1.5"/>
+      <text x="330" y="235" font-family="Inter, Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Analog-Digital</text>
+      <text x="330" y="255" font-family="Inter, Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Converters</text>
+      <line x1="291" y1="201" x2="255" y2="185" stroke="#888888" stroke-width="1.5"/>
+    </g>
+    
+    <!-- 应用领域 -->
+    <g id="applications-dark">
+      <!-- 应用领域项目 - 分散排列 -->
+      <text x="120" y="320" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Biomedical</text>
+      <text x="120" y="336" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Devices</text>
+      
+      <text x="250" y="320" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Neuromorphic</text>
+      <text x="250" y="336" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Computing</text>
+      
+      <text x="380" y="320" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Low-Power</text>
+      <text x="380" y="336" font-family="Inter, Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Systems</text>
+    </g>
+  </g>
+
+  <!-- 浅色模式 -->
+  <g class="light">
+    <!-- 背景 -->
+    <rect width="500" height="360" fill="transparent"/>
+    
+    <!-- 图表标题 -->
+    <text x="250" y="40" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="bold" fill="#000000" text-anchor="middle">Research Focus Areas</text>
+    
+    <!-- 中心点 -->
+    <circle cx="250" cy="180" r="5" fill="#ff3333"/>
+    
+    <!-- 主要研究领域 -->
+    <g id="main-areas-light">
+      <!-- 主要研究领域 - 左上象限 -->
+      <circle cx="170" cy="120" r="60" fill="none" stroke="#ff3333" stroke-width="2"/>
+      <text x="170" y="110" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#000000" text-anchor="middle">Brain-Computer</text>
+      <text x="170" y="130" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#000000" text-anchor="middle">Interfaces</text>
+      <line x1="209" y1="159" x2="245" y2="175" stroke="#ff3333" stroke-width="1.5"/>
+      
+      <!-- 主要研究领域 - 右上象限 -->
+      <circle cx="330" cy="120" r="60" fill="none" stroke="#ff3333" stroke-width="2"/>
+      <text x="330" y="110" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#000000" text-anchor="middle">Wireless</text>
+      <text x="330" y="130" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="bold" fill="#000000" text-anchor="middle">Communication</text>
+      <line x1="291" y1="159" x2="255" y2="175" stroke="#ff3333" stroke-width="1.5"/>
+      
+      <!-- 主要研究领域 - 左下象限 -->
+      <circle cx="170" cy="240" r="60" fill="none" stroke="#888888" stroke-width="1.5"/>
+      <text x="170" y="235" font-family="Inter, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Phase-Locked</text>
+      <text x="170" y="255" font-family="Inter, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Loops</text>
+      <line x1="209" y1="201" x2="245" y2="185" stroke="#888888" stroke-width="1.5"/>
+      
+      <!-- 主要研究领域 - 右下象限 -->
+      <circle cx="330" cy="240" r="60" fill="none" stroke="#888888" stroke-width="1.5"/>
+      <text x="330" y="235" font-family="Inter, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Analog-Digital</text>
+      <text x="330" y="255" font-family="Inter, Arial, sans-serif" font-size="14" fill="#000000" text-anchor="middle">Converters</text>
+      <line x1="291" y1="201" x2="255" y2="185" stroke="#888888" stroke-width="1.5"/>
+    </g>
+    
+    <!-- 应用领域 -->
+    <g id="applications-light">
+      <!-- 应用领域项目 - 分散排列 -->
+      <text x="120" y="320" font-family="Inter, Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Biomedical</text>
+      <text x="120" y="336" font-family="Inter, Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Devices</text>
+      
+      <text x="250" y="320" font-family="Inter, Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Neuromorphic</text>
+      <text x="250" y="336" font-family="Inter, Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Computing</text>
+      
+      <text x="380" y="320" font-family="Inter, Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Low-Power</text>
+      <text x="380" y="336" font-family="Inter, Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Systems</text>
+    </g>
+  </g>
+</svg> 

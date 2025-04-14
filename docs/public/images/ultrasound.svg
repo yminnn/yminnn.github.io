@@ -1,0 +1,39 @@
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #111111; }
+    .text-color { fill: #ffffff; }
+    .box-bg { fill: #333333; }
+    :root[data-theme='light'] .bg { fill: #f5f5f5; }
+    :root[data-theme='light'] .text-color { fill: #333333; }
+    :root[data-theme='light'] .box-bg { fill: #ffffff; }
+    
+    .stroke-color { stroke: #ffffff; }
+    :root[data-theme='light'] .stroke-color { stroke: #666666; }
+    
+    .data-point { fill: #ff5555; }
+    :root[data-theme='light'] .data-point { fill: #ff7777; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="300" height="160" class="bg"/>
+  
+  <!-- 传感器主体 -->
+  <rect x="50" y="60" width="60" height="40" class="box-bg stroke-color" stroke-width="1.5"/>
+  <text x="55" y="85" font-family="Arial" font-size="10" class="text-color">Sensor</text>
+  
+  <!-- 超声波发射 -->
+  <path d="M110,80 Q130,80 140,70 T170,80 T200,90" fill="none" stroke="#ff5555" stroke-width="1.5"/>
+  <path d="M110,80 Q130,80 140,90 T170,80 T200,70" fill="none" stroke="#ff5555" stroke-width="1.5"/>
+  
+  <!-- 功率指标 -->
+  <text x="120" y="50" font-family="Arial" font-size="10" class="text-color">Power: 12μW</text>
+  
+  <!-- 效率指标 -->
+  <line x1="50" y1="120" x2="200" y2="120" class="stroke-color" stroke-dasharray="4" stroke-width="1"/>
+  <text x="60" y="135" font-family="Arial" font-size="10" class="text-color">Efficiency: 89%</text>
+  
+  <!-- 实验数据点 -->
+  <circle cx="80" cy="120" r="3" class="data-point"/>
+  <circle cx="120" cy="120" r="3" class="data-point"/>
+  <circle cx="160" cy="120" r="3" class="data-point"/>
+</svg> 

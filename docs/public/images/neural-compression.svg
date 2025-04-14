@@ -1,0 +1,52 @@
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #111111; }
+    .text-color { fill: #ffffff; }
+    .box-bg { fill: #222222; }
+    :root[data-theme='light'] .bg { fill: #f5f5f5; }
+    :root[data-theme='light'] .text-color { fill: #333333; }
+    :root[data-theme='light'] .box-bg { fill: #ffffff; }
+    
+    .stroke-color { stroke: #ffffff; }
+    :root[data-theme='light'] .stroke-color { stroke: #333333; }
+    
+    .dash-stroke { stroke: #ffffff; }
+    :root[data-theme='light'] .dash-stroke { stroke: #666666; }
+    
+    .red-block { fill: #ff3333; }
+    :root[data-theme='light'] .red-block { fill: #ff3333; opacity: 0.9; }
+  </style>
+  
+  <!-- 背景 -->
+  <rect width="300" height="160" class="bg"/>
+  
+  <!-- 神经元 -->
+  <circle cx="70" cy="80" r="15" class="box-bg stroke-color" stroke-width="1.5"/>
+  <circle cx="70" cy="80" r="4" fill="#ff3333"/>
+  
+  <!-- 神经网络连接 -->
+  <line x1="85" y1="80" x2="125" y2="60" class="dash-stroke" stroke-width="1.5" stroke-dasharray="2,2"/>
+  <line x1="85" y1="80" x2="125" y2="100" class="dash-stroke" stroke-width="1.5" stroke-dasharray="2,2"/>
+  
+  <!-- 事件数据点 -->
+  <g transform="translate(130, 45)">
+    <rect width="40" height="5" class="red-block"/>
+    <rect width="40" height="5" y="15" class="red-block"/>
+    <rect width="40" height="5" y="30" class="red-block"/>
+    <rect width="40" height="5" y="45" class="red-block"/>
+    <rect width="40" height="5" y="60" class="red-block"/>
+  </g>
+  
+  <!-- 压缩箭头 -->
+  <path d="M180,80 L200,80 L195,75 L200,80 L195,85" fill="none" class="stroke-color" stroke-width="1.5"/>
+  
+  <!-- 压缩数据 -->
+  <g transform="translate(210, 70)">
+    <rect width="20" height="5" class="red-block"/>
+    <rect width="20" height="5" y="15" class="red-block"/>
+  </g>
+  
+  <!-- 数据减少标注 -->
+  <text x="210" y="50" font-family="Arial" font-size="10" class="text-color">11× Data</text>
+  <text x="210" y="62" font-family="Arial" font-size="10" class="text-color">Reduction</text>
+</svg> 

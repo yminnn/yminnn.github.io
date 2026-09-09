@@ -599,6 +599,12 @@ nav a {
   font-style: italic;
 }
 
+.publication .authors strong {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
 .publication .journal {
   font-style: italic;
 }

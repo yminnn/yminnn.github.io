@@ -521,8 +521,8 @@ nav a {
 }
 
 .chart-container {
-  flex: 2;
-  max-width: 70%;
+  flex: 1;
+  max-width: 100%;
   background: transparent;
   border-radius: 4px;
   overflow: hidden;

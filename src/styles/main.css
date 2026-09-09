@@ -555,6 +555,23 @@ nav a {
   color: var(--color-gray);
 }
 
+.publication-group {
+  margin-bottom: calc(var(--spacing-unit) * 5);
+}
+
+.publication-group:last-child {
+  margin-bottom: 0;
+}
+
+.publication-category {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin: 0 0 calc(var(--spacing-unit) * 2);
+}
+
 .publication {
   background-color: var(--color-publication-bg);
   border-radius: 4px;

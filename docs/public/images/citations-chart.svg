@@ -17,11 +17,6 @@
     <rect x="80" y="45" width="14" height="14" fill="#ff3333"/>
     <text x="100" y="57" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Annual Citations</text>
 
-    <line x1="200" y1="52" x2="221" y2="52" stroke="#ffffff" stroke-width="2"/>
-    <circle cx="225" cy="52" r="4" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <line x1="229" y1="52" x2="250" y2="52" stroke="#ffffff" stroke-width="2"/>
-    <text x="260" y="57" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">Cumulative Citations</text>
-
     <line x1="50" y1="250" x2="550" y2="250" stroke="#ffffff" stroke-width="1.5"/>
     <line x1="50" y1="250" x2="50" y2="50" stroke="#ffffff" stroke-width="1.5"/>
 
@@ -39,12 +34,6 @@
     <text x="45" y="130" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">60</text>
     <text x="45" y="90" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">80</text>
     <text x="45" y="50" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="end">100</text>
-
-    <text x="555" y="210" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">120</text>
-    <text x="555" y="170" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">240</text>
-    <text x="555" y="130" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">360</text>
-    <text x="555" y="90" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">480</text>
-    <text x="555" y="50" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="start">600</text>
 
     <text x="90" y="270" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">2016</text>
     <text x="133.4" y="270" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">2017</text>
@@ -84,40 +73,6 @@
     <text x="480.6" y="67" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">89</text>
     <text x="524" y="101" font-family="Arial, sans-serif" font-size="9" fill="#ffffff" text-anchor="middle">72</text>
 
-    <!-- 累计引用曲线 -->
-    <polyline
-      points="90,248.7 133.4,239.3 176.8,226.7 220.2,213.3 263.6,198.3 307,183.7 350.4,162.3 393.8,135.3 437.2,103.3 480.6,73.7 524,49.7"
-      fill="none"
-      stroke="#ffffff"
-      stroke-width="2"
-    />
-
-    <!-- 累计引用数据点 -->
-    <circle cx="90" cy="248.7" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="133.4" cy="239.3" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="176.8" cy="226.7" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="220.2" cy="213.3" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="263.6" cy="198.3" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="307" cy="183.7" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="350.4" cy="162.3" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="393.8" cy="135.3" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="437.2" cy="103.3" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="480.6" cy="73.7" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-    <circle cx="524" cy="49.7" r="3.5" fill="#111111" stroke="#ffffff" stroke-width="1.5"/>
-
-    <!-- 累计引用数标签 -->
-    <text x="101" y="251.7" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">4</text>
-    <text x="144.4" y="242.3" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">32</text>
-    <text x="187.8" y="229.7" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">70</text>
-    <text x="231.2" y="216.3" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">110</text>
-    <text x="274.6" y="201.3" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">155</text>
-    <text x="318" y="186.7" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">199</text>
-    <text x="361.4" y="165.3" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">263</text>
-    <text x="404.8" y="138.3" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">344</text>
-    <text x="448.2" y="106.3" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">440</text>
-    <text x="491.6" y="76.7" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">529</text>
-    <text x="535" y="52.7" font-family="Arial, sans-serif" font-size="8.5" fill="#ffffff" text-anchor="start">601</text>
-
     <text x="300" y="290" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">Year</text>
     <text x="15" y="150" font-family="Arial, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle" transform="rotate(-90, 15, 150)">Citations</text>
   </g>
@@ -130,11 +85,6 @@
 
     <rect x="80" y="45" width="14" height="14" fill="#ff3333"/>
     <text x="100" y="57" font-family="Arial, sans-serif" font-size="12" fill="#000000">Annual Citations</text>
-
-    <line x1="200" y1="52" x2="221" y2="52" stroke="#000000" stroke-width="2"/>
-    <circle cx="225" cy="52" r="4" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <line x1="229" y1="52" x2="250" y2="52" stroke="#000000" stroke-width="2"/>
-    <text x="260" y="57" font-family="Arial, sans-serif" font-size="12" fill="#000000">Cumulative Citations</text>
 
     <line x1="50" y1="250" x2="550" y2="250" stroke="#000000" stroke-width="1.5"/>
     <line x1="50" y1="250" x2="50" y2="50" stroke="#000000" stroke-width="1.5"/>
@@ -153,12 +103,6 @@
     <text x="45" y="130" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">60</text>
     <text x="45" y="90" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">80</text>
     <text x="45" y="50" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="end">100</text>
-
-    <text x="555" y="210" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">120</text>
-    <text x="555" y="170" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">240</text>
-    <text x="555" y="130" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">360</text>
-    <text x="555" y="90" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">480</text>
-    <text x="555" y="50" font-family="Arial, sans-serif" font-size="10" fill="#000000" text-anchor="start">600</text>
 
     <text x="90" y="270" font-family="Arial, sans-serif" font-size="9" fill="#000000" text-anchor="middle">2016</text>
     <text x="133.4" y="270" font-family="Arial, sans-serif" font-size="9" fill="#000000" text-anchor="middle">2017</text>
@@ -197,40 +141,6 @@
     <text x="437.2" y="53" font-family="Arial, sans-serif" font-size="9" fill="#000000" text-anchor="middle">96</text>
     <text x="480.6" y="67" font-family="Arial, sans-serif" font-size="9" fill="#000000" text-anchor="middle">89</text>
     <text x="524" y="101" font-family="Arial, sans-serif" font-size="9" fill="#000000" text-anchor="middle">72</text>
-
-    <!-- 累计引用曲线 -->
-    <polyline
-      points="90,248.7 133.4,239.3 176.8,226.7 220.2,213.3 263.6,198.3 307,183.7 350.4,162.3 393.8,135.3 437.2,103.3 480.6,73.7 524,49.7"
-      fill="none"
-      stroke="#000000"
-      stroke-width="2"
-    />
-
-    <!-- 累计引用数据点 -->
-    <circle cx="90" cy="248.7" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="133.4" cy="239.3" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="176.8" cy="226.7" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="220.2" cy="213.3" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="263.6" cy="198.3" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="307" cy="183.7" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="350.4" cy="162.3" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="393.8" cy="135.3" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="437.2" cy="103.3" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="480.6" cy="73.7" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-    <circle cx="524" cy="49.7" r="3.5" fill="white" stroke="#000000" stroke-width="1.5"/>
-
-    <!-- 累计引用数标签 -->
-    <text x="101" y="251.7" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">4</text>
-    <text x="144.4" y="242.3" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">32</text>
-    <text x="187.8" y="229.7" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">70</text>
-    <text x="231.2" y="216.3" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">110</text>
-    <text x="274.6" y="201.3" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">155</text>
-    <text x="318" y="186.7" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">199</text>
-    <text x="361.4" y="165.3" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">263</text>
-    <text x="404.8" y="138.3" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">344</text>
-    <text x="448.2" y="106.3" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">440</text>
-    <text x="491.6" y="76.7" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">529</text>
-    <text x="535" y="52.7" font-family="Arial, sans-serif" font-size="8.5" fill="#000000" text-anchor="start">601</text>
 
     <text x="300" y="290" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle">Year</text>
     <text x="15" y="150" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle" transform="rotate(-90, 15, 150)">Citations</text>

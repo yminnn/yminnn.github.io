@@ -1,0 +1,56 @@
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #111111; }
+    .text-color { fill: #ffffff; }
+    .box-bg { fill: #222222; }
+    :root[data-theme='light'] .bg { fill: #f5f5f5; }
+    :root[data-theme='light'] .text-color { fill: #333333; }
+    :root[data-theme='light'] .box-bg { fill: #ffffff; }
+
+    .stroke-color { stroke: #ffffff; }
+    :root[data-theme='light'] .stroke-color { stroke: #333333; }
+
+    .axis-color { stroke: #777777; }
+    :root[data-theme='light'] .axis-color { stroke: #999999; }
+
+    .dash-stroke { stroke: #888888; }
+    :root[data-theme='light'] .dash-stroke { stroke: #999999; }
+
+    .red-block { fill: #ff3333; }
+    :root[data-theme='light'] .red-block { fill: #ff3333; opacity: 0.9; }
+
+    .label { font-family: Arial, sans-serif; font-size: 9px; }
+    .small-label { font-family: Arial, sans-serif; font-size: 8px; }
+  </style>
+
+  <rect width="300" height="160" class="bg"/>
+
+  <text x="20" y="20" class="label text-color" font-weight="bold">Near-Sensor SNN</text>
+
+  <!-- continuous analog signal -->
+  <path d="M30,55 C45,40 55,70 70,55 C85,40 95,70 110,55 C125,40 135,70 150,55 C165,40 175,70 190,55 C205,40 215,70 230,55 C245,40 255,70 260,55"
+        fill="none" class="dash-stroke" stroke-width="1.2" stroke-dasharray="2,2"/>
+  <text x="30" y="45" class="small-label text-color" opacity="0.7">Continuous input</text>
+
+  <!-- axis -->
+  <line x1="30" y1="120" x2="270" y2="120" class="axis-color" stroke-width="1"/>
+
+  <!-- sparse send-on-delta events -->
+  <circle cx="46" cy="120" r="3" class="red-block"/>
+  <circle cx="88" cy="120" r="3" class="red-block"/>
+  <circle cx="150" cy="120" r="3" class="red-block"/>
+  <circle cx="176" cy="120" r="3" class="red-block"/>
+  <circle cx="238" cy="120" r="3" class="red-block"/>
+  <line x1="46" y1="120" x2="46" y2="112" stroke="#ff3333" stroke-width="1"/>
+  <line x1="88" y1="120" x2="88" y2="112" stroke="#ff3333" stroke-width="1"/>
+  <line x1="150" y1="120" x2="150" y2="112" stroke="#ff3333" stroke-width="1"/>
+  <line x1="176" y1="120" x2="176" y2="112" stroke="#ff3333" stroke-width="1"/>
+  <line x1="238" y1="120" x2="238" y2="112" stroke="#ff3333" stroke-width="1"/>
+
+  <text x="30" y="135" class="small-label red-block" fill="#ff3333">Send-on-delta events</text>
+  <text x="200" y="135" class="small-label text-color" opacity="0.7">Time</text>
+
+  <!-- near-sensor SNN box -->
+  <rect x="230" y="18" width="40" height="20" rx="2" class="box-bg stroke-color" stroke-width="1"/>
+  <text x="250" y="31" class="small-label text-color" text-anchor="middle" font-weight="bold">SNN</text>
+</svg>

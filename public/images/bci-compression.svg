@@ -1,0 +1,48 @@
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #111111; }
+    .text-color { fill: #ffffff; }
+    .box-bg { fill: #222222; }
+    :root[data-theme='light'] .bg { fill: #f5f5f5; }
+    :root[data-theme='light'] .text-color { fill: #333333; }
+    :root[data-theme='light'] .box-bg { fill: #ffffff; }
+
+    .stroke-color { stroke: #ffffff; }
+    :root[data-theme='light'] .stroke-color { stroke: #333333; }
+
+    .axis-color { stroke: #777777; }
+    :root[data-theme='light'] .axis-color { stroke: #999999; }
+
+    .red-block { fill: #ff3333; }
+    :root[data-theme='light'] .red-block { fill: #ff3333; opacity: 0.9; }
+
+    .muted-block { fill: #555555; }
+    :root[data-theme='light'] .muted-block { fill: #cccccc; }
+
+    .label { font-family: Arial, sans-serif; font-size: 9px; }
+    .small-label { font-family: Arial, sans-serif; font-size: 8px; }
+  </style>
+
+  <rect width="300" height="160" class="bg"/>
+
+  <text x="20" y="20" class="label text-color" font-weight="bold">Event-Based Compression</text>
+
+  <!-- axes -->
+  <line x1="45" y1="130" x2="270" y2="130" class="axis-color" stroke-width="1"/>
+  <line x1="45" y1="35" x2="45" y2="130" class="axis-color" stroke-width="1"/>
+
+  <!-- raw data bar -->
+  <rect x="75" y="35" width="34" height="95" class="muted-block"/>
+  <text x="92" y="145" class="small-label text-color" text-anchor="middle">Raw</text>
+
+  <!-- compressed bar (>11x shorter) -->
+  <rect x="185" y="121" width="34" height="9" class="red-block"/>
+  <text x="202" y="145" class="small-label text-color" text-anchor="middle">Compressed</text>
+
+  <!-- brace / reduction annotation -->
+  <path d="M109,40 C140,40 160,40 183,40" fill="none" class="axis-color" stroke-width="1" stroke-dasharray="2,2"/>
+  <path d="M180,35 L186,40 L180,45" fill="none" class="stroke-color" stroke-width="1.2"/>
+  <text x="145" y="34" class="label red-block" fill="#ff3333" text-anchor="middle" font-weight="bold">&gt;11&#215; smaller</text>
+
+  <text x="45" y="30" class="small-label text-color" text-anchor="start" opacity="0.7">Data volume</text>
+</svg>

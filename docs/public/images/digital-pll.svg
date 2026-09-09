@@ -1,0 +1,46 @@
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #111111; }
+    .text-color { fill: #ffffff; }
+    .box-bg { fill: #222222; }
+    :root[data-theme='light'] .bg { fill: #f5f5f5; }
+    :root[data-theme='light'] .text-color { fill: #333333; }
+    :root[data-theme='light'] .box-bg { fill: #ffffff; }
+
+    .stroke-color { stroke: #ffffff; }
+    :root[data-theme='light'] .stroke-color { stroke: #333333; }
+
+    .axis-color { stroke: #777777; }
+    :root[data-theme='light'] .axis-color { stroke: #999999; }
+
+    .dash-stroke { stroke: #888888; }
+    :root[data-theme='light'] .dash-stroke { stroke: #999999; }
+
+    .red-block { stroke: #ff3333; }
+
+    .label { font-family: Arial, sans-serif; font-size: 9px; }
+    .small-label { font-family: Arial, sans-serif; font-size: 8px; }
+  </style>
+
+  <rect width="300" height="160" class="bg"/>
+
+  <text x="20" y="20" class="label text-color" font-weight="bold">Dividerless Fractional-N PLL</text>
+
+  <!-- axes: x = time, y = frequency -->
+  <line x1="45" y1="130" x2="270" y2="130" class="axis-color" stroke-width="1"/>
+  <line x1="45" y1="35" x2="45" y2="130" class="axis-color" stroke-width="1"/>
+  <text x="255" y="142" class="small-label text-color" opacity="0.7">Time</text>
+  <text x="20" y="42" class="small-label text-color" opacity="0.7">Freq</text>
+
+  <!-- target frequency line -->
+  <line x1="45" y1="55" x2="270" y2="55" class="dash-stroke" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="250" y="50" class="small-label text-color" opacity="0.8">2.5 GHz</text>
+  <line x1="45" y1="120" x2="270" y2="120" class="dash-stroke" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="250" y="128" class="small-label text-color" opacity="0.8">1.8 GHz</text>
+
+  <!-- lock transient curve with spur-mitigated settling -->
+  <path d="M45,120 C70,118 90,90 110,75 C125,64 118,58 130,60 C142,62 136,56 145,57 C155,58 150,55 160,56 C175,57 190,55.5 270,55"
+        fill="none" class="red-block" stroke-width="1.6"/>
+
+  <text x="60" y="145" class="small-label text-color">673&#181;W &#183; Spur-Mitigated Lock</text>
+</svg>

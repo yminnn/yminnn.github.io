@@ -817,12 +817,14 @@ footer .container {
 
   .chart-container {
     max-width: 100%;
-    margin-bottom: calc(var(--spacing-unit) * 3);
+    overflow-x: auto;
+    justify-content: flex-start;
   }
 
-  .chart-caption {
-    text-align: center;
-    width: 100%;
+  .chart-container object {
+    width: 520px;
+    min-width: 520px;
+    flex-shrink: 0;
   }
 
   .publications-metrics {
@@ -846,16 +848,7 @@ footer .container {
   
   .project-card {
     flex-direction: column;
-    max-width: 280px;
-  }
-  
-  .project-image {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  
-  .project-info {
-    width: 100%;
+    max-width: 100%;
   }
   
   .publications-metrics {

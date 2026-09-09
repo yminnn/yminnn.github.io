@@ -163,6 +163,7 @@ a.active {
 /* 恢复默认高亮词样式 */
 .highlight {
   color: var(--color-accent);
+  font-weight: 700;
   position: relative;
   display: inline-block;
   padding: 0 2px;

@@ -348,7 +348,7 @@ nav a {
 /* Work Section */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: calc(var(--spacing-unit) * 4);
   margin: calc(var(--spacing-unit) * 6) 0;
 }
@@ -358,7 +358,8 @@ nav a {
   border-radius: 4px;
   overflow: hidden;
   transition: all 0.3s ease;
-  max-width: 350px;
+  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
   border: none;

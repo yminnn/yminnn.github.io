@@ -1,46 +1,8 @@
-<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .bg { fill: #111111; }
-    .text-color { fill: #ffffff; }
-    .box-bg { fill: #222222; }
-    :root[data-theme='light'] .bg { fill: #f5f5f5; }
-    :root[data-theme='light'] .text-color { fill: #333333; }
-    :root[data-theme='light'] .box-bg { fill: #ffffff; }
-
-    .stroke-color { stroke: #ffffff; }
-    :root[data-theme='light'] .stroke-color { stroke: #333333; }
-
-    .axis-color { stroke: #777777; }
-    :root[data-theme='light'] .axis-color { stroke: #999999; }
-
-    .dash-stroke { stroke: #888888; }
-    :root[data-theme='light'] .dash-stroke { stroke: #999999; }
-
-    .red-block { stroke: #ff3333; }
-
-    .label { font-family: Arial, sans-serif; font-size: 9px; }
-    .small-label { font-family: Arial, sans-serif; font-size: 8px; }
-  </style>
-
-  <rect width="300" height="160" class="bg"/>
-
-  <text x="20" y="20" class="label text-color" font-weight="bold">Dividerless Fractional-N PLL</text>
-
-  <!-- axes: x = time, y = frequency -->
-  <line x1="45" y1="130" x2="270" y2="130" class="axis-color" stroke-width="1"/>
-  <line x1="45" y1="35" x2="45" y2="130" class="axis-color" stroke-width="1"/>
-  <text x="255" y="142" class="small-label text-color" opacity="0.7">Time</text>
-  <text x="20" y="42" class="small-label text-color" opacity="0.7">Freq</text>
-
-  <!-- target frequency line -->
-  <line x1="45" y1="55" x2="270" y2="55" class="dash-stroke" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="250" y="50" class="small-label text-color" opacity="0.8">2.5 GHz</text>
-  <line x1="45" y1="120" x2="270" y2="120" class="dash-stroke" stroke-width="1" stroke-dasharray="3,2"/>
-  <text x="250" y="128" class="small-label text-color" opacity="0.8">1.8 GHz</text>
-
-  <!-- lock transient curve with spur-mitigated settling -->
-  <path d="M45,120 C70,118 90,90 110,75 C125,64 118,58 130,60 C142,62 136,56 145,57 C155,58 150,55 160,56 C175,57 190,55.5 270,55"
-        fill="none" class="red-block" stroke-width="1.6"/>
-
-  <text x="60" y="145" class="small-label text-color">673&#181;W &#183; Spur-Mitigated Lock</text>
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc"><title id="title">Dividerless fractional-N digital PLL</title><desc id="desc">A circular phase-lock visualization surrounds a compact digital PLL loop.</desc>
+  <defs><filter id="g"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><marker id="a" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0l6 3-6 3z" fill="#777"/></marker></defs>
+  <style>.bg{fill:#111}.ink{fill:#f5f5f5}.muted{fill:#777}.panel{fill:#181818;stroke:#303030}.wire{stroke:#666}:root[data-theme='light'] .bg{fill:#f5f5f5}:root[data-theme='light'] .ink{fill:#171717}:root[data-theme='light'] .panel{fill:#fff;stroke:#d8d8d8}:root[data-theme='light'] .wire{stroke:#999}.t{font-family:Inter,Arial,sans-serif}</style>
+  <rect width="300" height="160" class="bg"/><text x="18" y="22" class="ink t" font-size="10" font-weight="700" letter-spacing="1.2">DIGITAL PHASE CONTROL</text>
+  <circle cx="79" cy="82" r="38" fill="none" class="wire" stroke-width="1" stroke-dasharray="2 5"/><path d="M79 45a37 37 0 0 1 32 56" fill="none" stroke="#ff3333" stroke-width="3" stroke-linecap="round" filter="url(#g)"/><circle cx="79" cy="82" r="25" class="panel"/><path d="M79 82L96 67M79 82V59" stroke="#ff3333" stroke-width="2" stroke-linecap="round"/><circle cx="79" cy="82" r="4" fill="#ff3333"/><text x="79" y="136" class="muted t" font-size="7" text-anchor="middle">PHASE LOCK</text>
+  <g><rect x="140" y="45" width="42" height="28" rx="5" class="panel"/><rect x="207" y="45" width="56" height="28" rx="5" class="panel"/><rect x="173" y="96" width="56" height="28" rx="5" class="panel"/><text x="161" y="62" class="ink t" font-size="8" text-anchor="middle">TDC</text><text x="235" y="62" class="ink t" font-size="8" text-anchor="middle">DCO</text><text x="201" y="113" class="ink t" font-size="8" text-anchor="middle">DCTRL</text><path d="M183 59h20M235 74v18M173 110h-12V77" fill="none" class="wire" marker-end="url(#a)"/></g>
+  <text x="140" y="138" fill="#ff3333" class="t" font-size="11" font-weight="700">673 µW</text><text x="282" y="149" class="muted t" font-size="7" text-anchor="end">DIVIDERLESS · FRACTIONAL-N</text>
 </svg>

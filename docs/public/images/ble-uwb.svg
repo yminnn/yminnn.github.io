@@ -1,46 +1,9 @@
-<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .bg { fill: #111111; }
-    .text-color { fill: #ffffff; }
-    .box-bg { fill: #222222; }
-    :root[data-theme='light'] .bg { fill: #f5f5f5; }
-    :root[data-theme='light'] .text-color { fill: #333333; }
-    :root[data-theme='light'] .box-bg { fill: #ffffff; }
-
-    .stroke-color { stroke: #ffffff; }
-    :root[data-theme='light'] .stroke-color { stroke: #333333; }
-
-    .axis-color { stroke: #777777; }
-    :root[data-theme='light'] .axis-color { stroke: #999999; }
-
-    .red-block { fill: #ff3333; }
-    :root[data-theme='light'] .red-block { fill: #ff3333; opacity: 0.9; }
-
-    .label { font-family: Arial, sans-serif; font-size: 9px; }
-    .small-label { font-family: Arial, sans-serif; font-size: 8px; }
-  </style>
-
-  <rect width="300" height="160" class="bg"/>
-
-  <text x="20" y="20" class="label text-color" font-weight="bold">BLE / UWB Transceiver</text>
-
-  <!-- axes: x = frequency, y = power spectral density -->
-  <line x1="30" y1="120" x2="270" y2="120" class="axis-color" stroke-width="1"/>
-  <line x1="30" y1="35" x2="30" y2="120" class="axis-color" stroke-width="1"/>
-
-  <!-- UWB wideband hump (3-10 GHz) -->
-  <path d="M110,120 C130,90 150,70 175,68 C200,70 220,90 240,120"
-        fill="none" class="stroke-color" stroke-width="1.3"/>
-  <text x="175" y="60" class="small-label text-color" text-anchor="middle" opacity="0.8">UWB 3&#8211;10 GHz</text>
-
-  <!-- BLE narrowband spike (2.4 GHz) -->
-  <rect x="64" y="42" width="4" height="78" class="red-block"/>
-  <text x="66" y="35" class="small-label red-block" fill="#ff3333" text-anchor="middle">BLE 2.4 GHz</text>
-
-  <!-- frequency axis ticks -->
-  <text x="66" y="132" class="small-label text-color" text-anchor="middle" opacity="0.7">2.4</text>
-  <text x="175" y="132" class="small-label text-color" text-anchor="middle" opacity="0.7">3&#8211;10</text>
-  <text x="245" y="132" class="small-label text-color" text-anchor="middle" opacity="0.7">GHz</text>
-
-  <text x="30" y="145" class="small-label text-color">0.8V &#183; 0.8mm&#178; &#183; 40nm CMOS</text>
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc"><title id="title">BLE and ultra-wideband transceiver</title><desc id="desc">A silicon radio chip emits narrowband BLE and wideband UWB signals.</desc>
+  <defs><filter id="g"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="p" x1="0" y1="1" x2="0" y2="0"><stop stop-color="#ff3333" stop-opacity="0"/><stop offset="1" stop-color="#ff3333" stop-opacity=".4"/></linearGradient></defs>
+  <style>.bg{fill:#111}.ink{fill:#f5f5f5}.muted{fill:#777}.panel{fill:#181818;stroke:#3a3a3a}.wire{stroke:#666}:root[data-theme='light'] .bg{fill:#f5f5f5}:root[data-theme='light'] .ink{fill:#171717}:root[data-theme='light'] .panel{fill:#fff;stroke:#bbb}:root[data-theme='light'] .wire{stroke:#999}.t{font-family:Inter,Arial,sans-serif}</style>
+  <rect width="300" height="160" class="bg"/><text x="18" y="22" class="ink t" font-size="10" font-weight="700" letter-spacing="1.2">ONE RADIO · TWO WORLDS</text>
+  <rect x="20" y="46" width="74" height="74" rx="9" class="panel"/><rect x="33" y="59" width="48" height="48" rx="4" fill="none" stroke="#ff3333" stroke-width="1.3"/><g class="wire"><path d="M27 56h-9M27 70h-9M27 84h-9M27 98h-9M87 56h9M87 70h9M87 84h9M87 98h9M43 53v-9M57 53v-9M71 53v-9M43 113v9M57 113v9M71 113v9"/></g><text x="57" y="80" class="ink t" font-size="9" font-weight="700" text-anchor="middle">RF</text><text x="57" y="93" fill="#ff3333" class="t" font-size="7" text-anchor="middle">40 nm</text>
+  <path d="M108 111H280" class="wire"/><path d="M123 111V55" stroke="#ff3333" stroke-width="3" filter="url(#g)"/><text x="123" y="47" fill="#ff3333" class="t" font-size="8" font-weight="700" text-anchor="middle">BLE</text><text x="123" y="124" class="muted t" font-size="7" text-anchor="middle">2.4</text>
+  <path d="M160 111C174 84 186 68 207 65c22-3 41 16 59 46Z" fill="url(#p)" stroke="#ff3333" stroke-width="1.5"/><text x="212" y="55" class="ink t" font-size="8" font-weight="700" text-anchor="middle">IR-UWB</text><text x="212" y="124" class="muted t" font-size="7" text-anchor="middle">3—10 GHz</text>
+  <text x="20" y="148" class="muted t" font-size="7">0.8 V · 0.8 mm²</text><text x="280" y="148" class="muted t" font-size="7" text-anchor="end">BLE 5 · IEEE 802.15.4a/z</text>
 </svg>

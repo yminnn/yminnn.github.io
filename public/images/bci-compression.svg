@@ -1,48 +1,11 @@
-<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .bg { fill: #111111; }
-    .text-color { fill: #ffffff; }
-    .box-bg { fill: #222222; }
-    :root[data-theme='light'] .bg { fill: #f5f5f5; }
-    :root[data-theme='light'] .text-color { fill: #333333; }
-    :root[data-theme='light'] .box-bg { fill: #ffffff; }
-
-    .stroke-color { stroke: #ffffff; }
-    :root[data-theme='light'] .stroke-color { stroke: #333333; }
-
-    .axis-color { stroke: #777777; }
-    :root[data-theme='light'] .axis-color { stroke: #999999; }
-
-    .red-block { fill: #ff3333; }
-    :root[data-theme='light'] .red-block { fill: #ff3333; opacity: 0.9; }
-
-    .muted-block { fill: #555555; }
-    :root[data-theme='light'] .muted-block { fill: #cccccc; }
-
-    .label { font-family: Arial, sans-serif; font-size: 9px; }
-    .small-label { font-family: Arial, sans-serif; font-size: 8px; }
-  </style>
-
-  <rect width="300" height="160" class="bg"/>
-
-  <text x="20" y="20" class="label text-color" font-weight="bold">Event-Based Compression</text>
-
-  <!-- axes -->
-  <line x1="45" y1="130" x2="270" y2="130" class="axis-color" stroke-width="1"/>
-  <line x1="45" y1="35" x2="45" y2="130" class="axis-color" stroke-width="1"/>
-
-  <!-- raw data bar -->
-  <rect x="75" y="35" width="34" height="95" class="muted-block"/>
-  <text x="92" y="145" class="small-label text-color" text-anchor="middle">Raw</text>
-
-  <!-- compressed bar (>11x shorter) -->
-  <rect x="185" y="121" width="34" height="9" class="red-block"/>
-  <text x="202" y="145" class="small-label text-color" text-anchor="middle">Compressed</text>
-
-  <!-- brace / reduction annotation -->
-  <path d="M109,40 C140,40 160,40 183,40" fill="none" class="axis-color" stroke-width="1" stroke-dasharray="2,2"/>
-  <path d="M180,35 L186,40 L180,45" fill="none" class="stroke-color" stroke-width="1.2"/>
-  <text x="145" y="34" class="label red-block" fill="#ff3333" text-anchor="middle" font-weight="bold">&gt;11&#215; smaller</text>
-
-  <text x="45" y="30" class="small-label text-color" text-anchor="start" opacity="0.7">Data volume</text>
+<svg width="300" height="160" viewBox="0 0 300 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Event-based neural compression</title><desc id="desc">Dense neural signals become a sparse address-event packet stream.</desc>
+  <defs><linearGradient id="fade" x1="0" x2="1"><stop stop-color="#ff3333" stop-opacity=".08"/><stop offset="1" stop-color="#ff3333" stop-opacity=".5"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <style>.bg{fill:#111}.ink{fill:#f5f5f5}.muted{fill:#777}.line{stroke:#5d5d5d}.panel{fill:#181818;stroke:#292929}:root[data-theme='light'] .bg{fill:#f5f5f5}:root[data-theme='light'] .ink{fill:#171717}:root[data-theme='light'] .muted{fill:#777}:root[data-theme='light'] .line{stroke:#aaa}:root[data-theme='light'] .panel{fill:#fff;stroke:#ddd}.t{font-family:Inter,Arial,sans-serif}</style>
+  <rect width="300" height="160" class="bg"/><text x="18" y="22" class="ink t" font-size="10" font-weight="700" letter-spacing="1.2">NEURAL DATA → EVENTS</text>
+  <rect x="18" y="37" width="113" height="90" rx="7" class="panel"/><path d="M25 83 C31 83 31 74 36 74S41 94 46 94s5-43 10-43 5 67 10 67 5-50 10-50 5 28 10 28 5-18 10-18 5 11 10 11 5-25 10-25 5 19 9 19" fill="none" stroke="#ff3333" stroke-width="1.8" filter="url(#glow)"/>
+  <g class="line" stroke-width=".7" opacity=".35"><path d="M25 53H124M25 72H124M25 91H124M25 110H124"/></g><text x="27" y="119" class="muted t" font-size="7">RAW STREAM</text>
+  <path d="M142 81H164" class="line" stroke-width="1.2"/><path d="m160 77 5 4-5 4" fill="none" class="line" stroke-width="1.2"/><text x="153" y="72" fill="#ff3333" class="t" font-size="8" text-anchor="middle" font-weight="700">11×</text>
+  <rect x="174" y="37" width="108" height="90" rx="7" class="panel"/><path d="M186 108V67M201 108V91M216 108V58M231 108V83M246 108V72M261 108V97" stroke="#ff3333" stroke-width="2"/><g fill="#ff3333"><circle cx="186" cy="67" r="3"/><circle cx="201" cy="91" r="3"/><circle cx="216" cy="58" r="3"/><circle cx="231" cy="83" r="3"/><circle cx="246" cy="72" r="3"/><circle cx="261" cy="97" r="3"/></g><path d="M185 113H267" class="line"/><text x="184" y="119" class="muted t" font-size="7">μ-PACKETS</text>
+  <rect x="18" y="139" width="264" height="2" rx="1" fill="url(#fade)"/><text x="282" y="151" class="muted t" font-size="7" text-anchor="end">LOSSLESS · EVENT-DRIVEN</text>
 </svg>

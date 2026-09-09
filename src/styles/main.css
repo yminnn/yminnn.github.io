@@ -253,6 +253,15 @@ nav a {
   color: var(--color-text);
 }
 
+.subheadline {
+  font-size: 1.1rem;
+  font-weight: 300;
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
 /* 粒子动画容器样式 - 现在在底部 */
 .particle-footer-wrapper {
   width: 100%;
@@ -643,6 +652,13 @@ nav a {
 .contact-info {
   max-width: 600px;
   color: var(--color-text);
+}
+
+.contact-invite {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: calc(var(--spacing-unit) * 4);
 }
 
 .social-links {

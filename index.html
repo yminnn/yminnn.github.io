@@ -159,15 +159,20 @@
                 </div>
             </div>
 
-            <div class="publications-list">
+            <div class="publication-view-controls" role="tablist" aria-label="Publication list view">
+                <button type="button" class="publication-view-button active" id="publications-by-topic-tab" role="tab" aria-selected="true" aria-controls="publications-by-topic">By topic</button>
+                <button type="button" class="publication-view-button" id="publications-by-year-tab" role="tab" aria-selected="false" aria-controls="publications-by-year">By year</button>
+            </div>
+
+            <div class="publications-list" id="publications-by-topic" role="tabpanel" aria-labelledby="publications-by-topic-tab">
                 <div class="publication-group">
                     <h3 class="publication-category">Brain-Computer Interfaces</h3>
-                    <div class="publication">
+                    <div class="publication" data-year="2024">
                         <h3>An event-based neural compressive telemetry with &gt;11&#215; loss-less data reduction for high-bandwidth intracortical brain computer interfaces</h3>
                         <p class="authors"><strong>Y He</strong>, S Van Der Ven, HP Liaw, C Shi, P Russo, M Gourdouparis, et al.</p>
                         <p class="journal">IEEE Transactions on Biomedical Circuits and Systems 18 (5), 1100-1111, 2024</p>
                     </div>
-                    <div class="publication">
+                    <div class="publication" data-year="2026">
                         <h3>Event-based SerDes telemetry network for distributed brain computer interfaces</h3>
                         <p class="authors">P Russo, <strong>Y He</strong>, J Romme, S Traferro, GJ Van Schaik, HP Liaw, Z Ren, et al.</p>
                         <p class="journal">Neuromorphic Computing and Engineering 6 (1), 014001, 2026</p>
@@ -176,12 +181,12 @@
 
                 <div class="publication-group">
                     <h3 class="publication-category">Neuromorphic Computing</h3>
-                    <div class="publication">
+                    <div class="publication" data-year="2022">
                         <h3>An implantable neuromorphic sensing system featuring near-sensor computation and send-on-delta transmission for wireless neural sensing of peripheral nerves</h3>
                         <p class="authors"><strong>Y He</strong>, F Corradi, C Shi, S Van Der Ven, M Timmermans, J Stuijt, P Detterer, et al.</p>
                         <p class="journal">IEEE Journal of Solid-State Circuits 57 (10), 3058-3070, 2022</p>
                     </div>
-                    <div class="publication">
+                    <div class="publication" data-year="2021">
                         <h3>A 28.2 &#181;W Neuromorphic Sensing System Featuring SNN-based Near-sensor Computation and Event-Driven Body-Channel Communication for Insertable Cardiac Monitoring</h3>
                         <p class="authors"><strong>Y He</strong>, F Corradi, C Shi, M Ding, M Timmermans, J Stuijt, P Harpe, I Ocket, et al.</p>
                         <p class="journal">2021 IEEE Asian Solid-State Circuits Conference (A-SSCC), 1-3, 2021</p>
@@ -190,12 +195,12 @@
 
                 <div class="publication-group">
                     <h3 class="publication-category">Digital PLL</h3>
-                    <div class="publication">
+                    <div class="publication" data-year="2017">
                         <h3>A 673&#181;W 1.8-to-2.5 GHz dividerless fractional-N digital PLL with an inherent frequency-capture capability and a phase-dithering spur mitigation for IoT applications</h3>
                         <p class="authors"><strong>Y He</strong>, YH Liu, T Kuramochi, J van den Heuvel, B Busze, N Markulic, et al.</p>
                         <p class="journal">2017 IEEE International Solid-State Circuits Conference (ISSCC), 420-421, 2017</p>
                     </div>
-                    <div class="publication">
+                    <div class="publication" data-year="2022">
                         <h3>An injection-locked ring-oscillator-based fractional-N digital PLL supporting BLE frequency modulation</h3>
                         <p class="authors"><strong>Y He</strong>, J van den Heuvel, P Mateman, E Allebes, S Traferro, J Dijkhuis, et al.</p>
                         <p class="journal">IEEE Journal of Solid-State Circuits 57 (6), 1765-1775, 2022</p>
@@ -204,18 +209,19 @@
 
                 <div class="publication-group">
                     <h3 class="publication-category">Radio (BLE / UWB)</h3>
-                    <div class="publication">
+                    <div class="publication" data-year="2018">
                         <h3>A 0.8V 0.8mm&#178; Bluetooth 5/BLE digital-intensive transceiver with a 2.3mW phase-tracking RX utilizing a hybrid loop filter for interference resilience in 40nm CMOS</h3>
                         <p class="authors">M Ding, X Wang, P Zhang, <strong>Y He</strong>, S Traferro, K Shibata, M Song, et al.</p>
                         <p class="journal">2018 IEEE International Solid-State Circuits Conference (ISSCC), 446-448, 2018</p>
                     </div>
-                    <div class="publication">
+                    <div class="publication" data-year="2021">
                         <h3>A 3-to-10GHz 180pJ/b IEEE802.15.4z/4a IR-UWB coherent polar transmitter in 28nm CMOS with asynchronous amplitude pulse-shaping and injection-locked phase modulation</h3>
                         <p class="authors">E Allebes, G Singh, <strong>Y He</strong>, E Tiurin, P Mateman, M Ding, J Dijkhuis, et al.</p>
                         <p class="journal">2021 IEEE International Solid-State Circuits Conference (ISSCC) 64, 304-306, 2021</p>
                     </div>
                 </div>
             </div>
+            <div class="publications-list publication-timeline" id="publications-by-year" role="tabpanel" aria-labelledby="publications-by-year-tab" hidden></div>
             <a href="https://scholar.google.com/citations?user=bfAVF3UAAAAJ&hl=en" target="_blank" class="view-more">View all publications</a>
         </div>
     </section>
